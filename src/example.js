@@ -17,11 +17,11 @@ import {
 import {
   actions,
   defaultActions,
-  RichEditor,
   RichToolbar,
 } from 'react-native-pell-rich-editor';
 import {InsertLinkModal} from './insertLink';
 import {EmojiView} from './emoji';
+import RichTextEditor from './RichEditor';
 
 const phizIcon = require('./assets/phiz.png');
 const htmlIcon = require('./assets/h5.png');
@@ -220,7 +220,7 @@ class Example extends React.Component {
           style={{flexGrow: 1}}
           enabled
           behavior={Platform.OS === 'android' ? undefined : 'padding'}>
-          <RichEditor
+          <RichTextEditor
             // initialFocus={true}
             editorStyle={contentStyle} // default light style
             containerStyle={themeBg}
